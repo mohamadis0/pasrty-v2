@@ -8,7 +8,7 @@ function Navbar({toggle}) {
   
   return (
     <>
-      <div className="w-full h-16 md:h-20 xl:h-28 shadow-lg sticky top-0">
+      <div className="w-full h-16 md:h-20 xl:h-28 shadow-lg bg-white sticky top-0 z-50">
         <div className="container mx-auto px-4 h-full">
           <div className="flex justify-between items-center h-full">
             <Logo />

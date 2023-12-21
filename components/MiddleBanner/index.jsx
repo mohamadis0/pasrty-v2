@@ -1,17 +1,14 @@
 "use client";
-import React, { useRef, useState } from "react";
-import backgroundImage from "../../public/images/hero.jpg";
-import Link from "next/link";
+import React from "react";
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 
-function Hero() {
-  
+function Middle() {
   const divStyle = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     backgroundSize: "cover",
+    // height: "70vh",
   };
   const slideImages = [
     {
@@ -45,47 +42,50 @@ function Hero() {
       items: 1,
     },
   };
-  
+
   return (
-    // <Link href="/sweets">
-    <div>
-      
+    <div className="grid place-content-center mx-8 sm:mx-12 md:mx-16 lg:mx-24">
       <Carousel
-      
-      //  additionalTransfrom={'scale(2,3)'}
+       className="lg:h-[400px] lg:w-[1000px] "
         autoPlay={true}
         swipeable={true}
         arrows={false}
         draggable={true}
         showDots={false}
         responsive={responsive}
-        ssr={true} 
+        ssr={true}
         infinite={true}
-        customTransition={'transform 300ms ease-in-out '}
-        // additionalTransfrom={2}
+        customTransition={"transform 300ms ease-in-out "}
         autoPlaySpeed={1000}
         keyBoardControl={true}
-        // customTransition="all .5"
         transitionDuration={1000}
-        // dotListClass="custom-dot-list-style"
-       
       >
         {slideImages.map((slideImage, index) => (
-          <div key={index}  >
+          <div key={index} className="flex flex-row h-[200px] md:h-[300px] lg:h-[500px]">
            
-            <div
-            className="h-[200px] md:h-[300px] lg:h-[500px]"
-              
-              style={{ ...divStyle, backgroundImage: `url(${slideImage.url}) ` }}
+            <div className="basis-3/4"
+              style={{
+                ...divStyle,
+                backgroundImage: `url(${slideImage.url}) `,
+              }}
             >
+                
             </div>
-          </div>
+            <div className="basis-1/4 bg-gray-200 grid place-content-center ">
+                <div >
+                    <p className="font-semibold font-mono lg:text-4xl text-pink-400  " 
+                    sytle={{
+                       shadow: `2px 2px 5px red`,
+                    }}
+                    >
+                       Every thing is fresh
+                    </p></div>
+                </div>
+            </div>
         ))}
       </Carousel>
     </div>
-
-    // </Link>
   );
 }
 
-export default Hero;
+export default Middle;
