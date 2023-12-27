@@ -1,7 +1,5 @@
 import Hero from "@/components/Hero"
 import Category from "@/components/Category"
-import Image from "next/image"
-import Link from "next/link"
 import Day from "@/components/ItemOfTheDay"
 import Middle from "@/components/MiddleBanner"
 import Third from "@/components/ThirdBanner"

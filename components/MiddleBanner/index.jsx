@@ -44,9 +44,10 @@ function Middle() {
   };
 
   return (
-    <div className="grid place-content-center mx-8 sm:mx-12 md:mx-16 lg:mx-24">
+    <div 
+      className=" mx-8 sm:mx-12 md:mx-16 lg:mx-24"> 
       <Carousel
-       className="lg:h-[400px] lg:w-[1000px] "
+       className="lg:h-[400px]  "
         autoPlay={true}
         swipeable={true}
         arrows={false}
@@ -71,12 +72,10 @@ function Middle() {
             >
                 
             </div>
-            <div className="basis-1/4 bg-gray-200 grid place-content-center ">
+            <div className="basis-1/4 hover:bg-gray-200 grid place-items-center ">
                 <div >
-                    <p className="font-semibold font-mono lg:text-4xl text-pink-400  " 
-                    sytle={{
-                       shadow: `2px 2px 5px red`,
-                    }}
+                    <p className=" px-4  font-semibold font-mono lg:text-4xl text-pink-400  " 
+                   
                     >
                        Every thing is fresh
                     </p></div>

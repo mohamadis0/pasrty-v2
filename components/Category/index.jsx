@@ -1,8 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import backgroundImage from "../../public/images/pop.jpg";
-import Image from "next/image";
-import Card from "../SliderCard";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { cardsData } from "../data/Data";
@@ -86,7 +83,9 @@ function Category() {
   };
   return (
     <div
-      className="bg-cover bg-center flex justify-between h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] my-12 md:my-16 lg:my-24 "
+    // className="bg-cover bg-center flex justify-between h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] my-8 md:my-16 lg:my-24 "
+    className="bg-cover bg-center h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] my-8 md:my-16 lg:my-24 "
+      
       // style={{
       //   backgroundImage: `url(${backgroundImage.src})`,
       //   backgroundPosition: "center",
@@ -99,14 +98,14 @@ function Category() {
       //   justifyContent: 'center'
       // }}
     >
-      <div className="absolute grid justify-items-center  w-full">
-        <p className=" font-mono text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold ">
+      <div className=" grid justify-items-center  w-full">
+        <p className="mb-12 font-mono text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold ">
           Categories
         </p>
       </div>
       {/* <div className=" bg-slate-200"> */}
       <Carousel
-        className=" m-12 p-12 sm:m-8 sm:p-8 md:m-12 md:p-12 lg:m-16 lg:p-16 "
+        className=" mx-12"
         swipeable={true}
         draggable={true}
         showDots={false}

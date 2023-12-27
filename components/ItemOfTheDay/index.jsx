@@ -7,7 +7,8 @@ function Day() {
       <p className="font-mono font-semibold text-xl md:text-3xl lg:text-4xl text-pink-700 mb-6 md:mb-10 lg:mb-12">
       Items of the day
       </p>
-      <div className='border border-black w-full h-[200px] md:h-[300px] lg:h-[500px] grid place-content-center'>
+      <div className=' w-full h-[200px] md:h-[300px] lg:h-[500px] flex justify-center'>
+    <Card/>
     <Card/>
       </div>
      </div>

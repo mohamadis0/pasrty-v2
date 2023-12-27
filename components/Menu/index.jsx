@@ -1,9 +1,12 @@
 "use client"
 import React from 'react'
-import Carousel from 'react-multi-carousel'
+import Carousel from 'react-multi-carousel';
+import "react-multi-carousel/lib/styles.css";
 import Left from '../Category/Arrows/Left';
 import Right from '../Category/Arrows/Right';
 import { cardsData } from '../data/Data';
+import MenuCard from '../MenuCard';
+import Link from 'next/link';
 
 function Menu() {
     const responsive = {
@@ -26,12 +29,13 @@ function Menu() {
       };
   return (
     <div className=''>
-        <p className='font-mono font-bold text-xl grid justify-items-center'>Menu</p>
+
+        <p className='font-mono font-bold text-xl grid justify-items-center text-pink-400'>Menu</p>
         <Carousel
         className=" m-12 p-12 sm:m-8 sm:p-8 md:m-12 md:p-12 lg:m-16 lg:p-16 "
         swipeable={true}
         draggable={true}
-        showDots={false}
+        showDots={true}
         responsive={responsive}
         ssr={true} 
         infinite={true}
@@ -48,7 +52,7 @@ function Menu() {
         // itemClass="carousel-item-padding-40-px"
       >
         {cardsData.map((chunk, index) => (
-            <div></div>
+            <MenuCard/>
         ))}
       </Carousel>
     </div>

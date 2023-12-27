@@ -2,65 +2,99 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import Search from "./Search";
+import { useState } from "react";
 
-function Navbar({toggle}) {
+function Navbar({isOpen,toggle}) {
 
-  
+  const [activeLink, setActiveLink] = useState(null);
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
   return (
     <>
-      <div className="w-full h-16 md:h-20 xl:h-28 shadow-lg bg-white sticky top-0 z-50">
-        <div className="container mx-auto px-4 h-full">
+       <div className="w-full h-12 md:h-16 xl:h-20 shadow-lg bg-white sticky top-0 z-50">
+         <div className=" mx-auto px-16 h-full">
           <div className="flex justify-between items-center h-full">
             <Logo />
-            
 
-            <ul className="hidden md:flex gap-x-6 ">
-              <li>
-                <Link href="/home">
-                  <p className="lg:text-xl">Home</p>
+            <ul className="hidden md:flex gap-x-20 ">
+              <li className={`flex items-center  ${
+                  activeLink === "home"
+                    ? "border-2 border-slate-400 rounded p-2 text-pink-400 lg:text-md"
+                    : ""
+                }`}>
+                <Link href="/home"
+                 
+                 onClick={() => handleLinkClick("home")}>
+                  
+                  
+                 Home
                 </Link>
               </li>
-              <li>
-                <Link href="/sweets">
-                  <p className="lg:text-xl">Sweets</p>
+              <li
+              className={`flex items-center ${
+                activeLink === "sweets"
+                  ? "border-2 border-slate-400 rounded p-2 text-pink-400 lg:text-md"
+                  : ""
+              }`}>
+                <Link href="/sweets"
+                 onClick={() => handleLinkClick("sweets")}>
+                 Sweets
                 </Link>
               </li>
-              <li>
-                <Link href="/cart">
-                  <p className="lg:text-xl">Cart</p>
+              <li
+              className={`flex items-center ${
+                activeLink === "cart"
+                  ? "border-2 border-slate-400 rounded p-2 text-pink-400 lg:text-md"
+                  : ""
+              }`}>
+                <Link href="/cart"
+                 onClick={() => handleLinkClick("cart")}>
+                  Cart
                 </Link>
               </li>
-              <li>
-                <Link href="/login">
-                  <p className="lg:text-xl">Login</p>
+              <li
+              className={`flex items-center ${
+                activeLink === "login"
+                  ? "border-2 border-slate-400 rounded p-2 text-pink-400 lg:text-md"
+                  : ""
+              }`}>
+                <Link href="/login"
+                 onClick={() => handleLinkClick("login")}>
+                  Login
                 </Link>
               </li>
-              <li>
+              <li className="flex items-center">
                 <Search/>
               </li>
             </ul>
             
+          
+     <div className="md:hidden flex items-center">
             <button
-            type="button"
-              className="inline-flex items-center md:hidden"
-              onClick={toggle}
+            className="outline-none mobile-menu-button "
+            onClick={toggle}
+          >
+            <svg
+              className={`w-6 h-6 text-gray-500 hover:text-pink-400 ${
+                isOpen ? "transform rotate-90" : ""
+              }`}
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="black"
-                  d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"
-                />
-              </svg>
-            </button>
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+          </div>
       
           </div>
-        </div>
-      </div>
+       </div>
+    </div> 
     </>
   );
 }
