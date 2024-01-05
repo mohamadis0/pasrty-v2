@@ -39,7 +39,7 @@ const Sidebar = ({ isOpen, toggle }) => {
               href="/login"
               className="flex justify-center font-['spectral'] text-sm px-2 py-2 text-black hover:bg-pink-300 transition duration-200"
               onClick={toggle}>
-              Login
+              Sign in
             </Link>
           </li>
         

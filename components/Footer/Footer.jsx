@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -15,34 +16,34 @@ function Footer() {
         <div className="grid gap-2 md:gap-4 lg:gap-6">
           <p className="text-black font-semibold">Quick Links</p>
 
-          <p className="text-black">
+          <Link href="profile" className="text-black">
             Profile
-          </p>
-          <p className="text-black">
+          </Link>
+          <Link href="orders" className="text-black">
             My Orders
-          </p>
-          <p className="text-black">
+          </Link>
+          <Link href="contactUs" className="text-black">
             Contact Us
-          </p>
-          <p className="text-black">
+          </Link>
+          <Link href="career" className="text-black">
             Career
-          </p>
+          </Link>
         </div>
         <div className="grid gap-2 md:gap-4 lg:gap-6">
           <p className="visible sm:invisible text-black font-semibold">More</p>
 
-          <p className="text-black">
+          <Link href="aboutUs" className="text-black">
             About US
-          </p>
-          <p className="text-black">
+          </Link>
+          <Link href="privacyPolicy" className="text-black">
             Privacy Policy
-          </p>
-          <p className="text-black">
+          </Link>
+          <Link href="termsAndConditions" className="text-black">
             Terms & Conditions
-          </p>
-          <p className="text-black">
+          </Link>
+          <Link href="faqs" className="text-black">
             FAQs
-          </p>
+          </Link>
         </div>
         <div className="grid gap-2 md:gap-4 lg:gap-6">
           <p className="text-black font-semibold">Install App</p>

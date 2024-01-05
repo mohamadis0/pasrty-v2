@@ -22,7 +22,7 @@ function Search() {
       <div className={`h-10  border-2 rounded-xl border-pink-600 grid place-items-center ${activeLink ? "block" : "hidden"}`}>
         <div className="flex">
         <input type="text" className="w-52 h-fill focus:outline-none text-xs rounded-xl pl-3 placeholder:text-pink-600 placeholder:font-serif" placeholder="Search For Products" />
-        <LuSearch size={"15px"} className="mx-3"/>
+        <LuSearch size={"15px"} className="mx-3" onClick={() => handleLinkClick()} />
       </div></div>
     </div>
   );

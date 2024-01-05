@@ -62,7 +62,7 @@ function Navbar({isOpen,toggle}) {
               }`}>
                 <Link href="/login"
                  onClick={() => handleLinkClick("login")}>
-                  Login
+                  Sign in
                 </Link>
               </li>
               <li className="flex items-center">
