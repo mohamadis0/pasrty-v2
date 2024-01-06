@@ -32,6 +32,9 @@ function GoogleM() {
   const onUnmount = useCallback(function callback(map) {
     setMap(null);
   }, []);
+  const handleMarkerDragEnd = useCallback((e) => {
+    console.log("Marker dragged to:", e.latLng.lat(), e.latLng.lng());
+  }, []);
 
   return isLoaded ? (
     <div className="w-full h-48 sm:h-52 md:h-72 lg:h-96">
@@ -46,7 +49,7 @@ function GoogleM() {
         <Marker
           position={position}
           draggable={true}
-        //   onDragEnd={handleMarkerDragEnd}
+          onDragEnd={handleMarkerDragEnd}
         />
       </GoogleMap>
     </div>

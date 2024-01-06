@@ -2,7 +2,7 @@ function contactUs() {
   return (
     <div className="flex justify-center items-center py-10 sm:py-12 md:py-20 lg:py-24 lg:px-12 px-10">
       <div className="md:w-2/3 w-full border-2 border-[#a7bdad] shadow-xl">
-        <div className="md:mx-36 md:my-8 lg:mx-44 lg:my-10">
+        <div className=" mx-10 my-5 sm:mx-28 sm:my-6 md:mx-36 md:my-8 lg:mx-44 lg:my-10">
           <div className="flex justify-start">
             <div className="grid gap-2">
               <p className="font-serif text-xl">Talk To Our</p>
@@ -44,7 +44,7 @@ function contactUs() {
           </div>
           </div>
           <div className="border-2 border-[#a7bdad] rounded flex justify-center text-pink-500 mt-8  ">
-              <button className="w-full py-2 lg:py-3 hover:bg-slate-200">
+              <button className="w-full py-3 hover:bg-slate-200">
                 Send
               </button>
             </div>
