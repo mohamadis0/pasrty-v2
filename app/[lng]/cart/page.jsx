@@ -8,10 +8,10 @@ function page() {
       <div className="mx-14 flex-col">
         <p className="font-serif font-semibold pt-8 pb-5 ">Review Order</p>
         <div className="flex gap-4 ">
-          <table className=" table-auto overflow-hidden w-2/3 h-fit border border-[#a5bcab] rounded-lg">
+          <table className=" w-2/3 h-fit overflow-hidden border border-[#a5bcab] rounded-lg">
             <thead className="bg-[#a5bcab] border-b-2 border-[#5b8969] h-16">
               <tr>
-                <td className="w-1/6"></td>
+                <td className="w-1/6 rounded-tl-lg"></td>
                 <td className="w-5/12 text-[#5b8969]">Product Description</td>
                 <td className="w-1/6 text-[#5b8969]">Quantity</td>
                 <td className="w-1/6 text-[#5b8969]">Price</td>
@@ -27,9 +27,9 @@ function page() {
                 <td>
                   <p></p>
                 </td>
+                <td ></td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td ></td>
               </tr>
             </tbody>
           </table>

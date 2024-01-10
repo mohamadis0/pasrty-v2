@@ -1,4 +1,5 @@
 import SweetCard from "@/components/SweetCard";
+import SweetCarousel from "@/components/SweetCarousel";
 import SweetCategories from "@/components/SweetCategories";
 
 
@@ -12,6 +13,7 @@ function page() {
       </div>
 
       <SweetCategories/>
+      <SweetCarousel/>
       <SweetCard/>
     </div>
   );

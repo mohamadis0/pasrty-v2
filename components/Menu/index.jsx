@@ -12,19 +12,19 @@ function Menu() {
     const responsive = {
         superLargeDesktop: {
           breakpoint: { max: 4000, min: 3000 },
-          items: 1,
+          items: 4,
         },
         desktop: {
           breakpoint: { max: 3000, min: 1024 },
-          items: 1,
+          items: 4,
         },
         tablet: {
           breakpoint: { max: 1024, min: 464 },
-          items: 1,
+          items: 3,
         },
         mobile: {
           breakpoint: { max: 464, min: 0 },
-          items: 1,
+          items: 2,
         },
       };
   return (
@@ -32,7 +32,7 @@ function Menu() {
 
         <p className='font-mono font-bold text-xl grid justify-items-center text-pink-400'>Menu</p>
         <Carousel
-        className=" m-12 p-12 sm:m-8 sm:p-8 md:m-12 md:p-12 lg:m-16 lg:p-16 "
+        className=" m-12 p-12 sm:m-8 sm:p-8 md:m-12 md:p-12 lg:m-16 "
         swipeable={true}
         draggable={true}
         showDots={true}
@@ -51,8 +51,8 @@ function Menu() {
         // dotListClass="custom-dot-list-style"
         // itemClass="carousel-item-padding-40-px"
       >
-        {cardsData.map((chunk, index) => (
-            <MenuCard/>
+        {cardsData.map((item, index) => (
+            <MenuCard key={index} name={item.title} price={item.price} img={item.imageSrc}/>
         ))}
       </Carousel>
     </div>

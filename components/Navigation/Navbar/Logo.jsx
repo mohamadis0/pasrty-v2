@@ -17,13 +17,20 @@ const Logo = () => {
   return (
     <>
       <Link href="/">
+        <div className="h-5 w-5 lg:h-10 lg:w-10 relative">
         <Image
           src="/images/cupcake.jpg"
           alt="Logo"
           width={width < 1024 ? "50" : "60"}
-          height='5'
-          className="relative"
+          height={width < 1024 ? "40" : "60"}
+          
         />
+        {/* <Image
+          src="/images/cupcake.jpg"
+          alt="Logo"
+          layout="fill"          
+        /> */}
+        </div>
       </Link>
     </>
   );

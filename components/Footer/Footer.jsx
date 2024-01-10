@@ -1,10 +1,38 @@
+"use client"
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
+import BottomNavigation from "../BottomNavigation";
 
 function Footer() {
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+
+  const updateWindowDimensions = () => {
+    setDimensions({ width: window.innerWidth, height: window.innerHeight });
+  };
+
+  useEffect(() => {
+    updateWindowDimensions();
+    return () => {
+      window.removeEventListener("resize", updateWindowDimensions);
+    };
+  }, []); 
+
+  useEffect(
+    () => {
+      window.addEventListener("resize", updateWindowDimensions);
+      return () => {
+        window.removeEventListener("resize", updateWindowDimensions);
+      };
+    },
+    []
+  );
+
   return (
+    <>
+    {dimensions.width <= 995 && <BottomNavigation />}
+    {dimensions.width > 995 && (
     <footer className="bg-pink-200 text-white  ">
       <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6 sm:px-8 px-5 py-16 lg:mx-40">
         <div className="grid gap-2 md:gap-4 lg:gap-6">
@@ -61,7 +89,10 @@ function Footer() {
         </div>
       </div>
     </footer>
-  );
+   
+   )}
+   </>
+ );
 }
 
 export default Footer;

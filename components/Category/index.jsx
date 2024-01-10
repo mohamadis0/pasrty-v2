@@ -15,28 +15,20 @@ function Category() {
   };
 
   useEffect(() => {
-    // componentDidMount
     updateWindowDimensions();
-    // componentWillUnmount
-
     return () => {
       window.removeEventListener("resize", updateWindowDimensions);
     };
-  }, []); // empty dependency array to run effect only once
+  }, []); 
 
   useEffect(
     () => {
-      // componentDidUpdate
       window.addEventListener("resize", updateWindowDimensions);
-
-      // componentWillUnmount
       return () => {
         window.removeEventListener("resize", updateWindowDimensions);
       };
     },
-    [
-      /* add dependencies if needed */
-    ]
+    []
   );
 
   function chunkArray(arr, chunkSize) {

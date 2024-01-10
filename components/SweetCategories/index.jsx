@@ -24,37 +24,35 @@ function SweetCategories() {
     },
   };
   return (
-    
-        <div  
-        className="z-20"
-        style={{
+    <div
+      className="z-20"
+      style={{
         position: "-webkit-sticky",
         position: "sticky",
         top: "4rem",
         backgroundColor: " white",
-      }}>
-    <div
-      className="mt-10  flex justify-center mx-2 lg:mx-80"
-     
+      }}
     >
-      <Carousel
-        className="fixed  m-2 p-4 sm:m-6 md:m-8 "
-        swipeable={true}
-        draggable={true}
-        showDots={false}
-        arrows={false}
-        responsive={responsive}
-        infinite={true}
-        keyBoardControl={true}
-        customTransition={"transform 300ms ease-in-out "}
-        transitionDuration={1000}
-        centerMode={false}
-      >
-        {cardsData.map((card, index) => (
-          <Button key={index} name={card.title} />
-        ))}
-      </Carousel>
-    </div></div>
+      <div className="mt-10  flex justify-center mx-2 lg:mx-80">
+        <Carousel
+          className=" m-2 p-4 sm:m-6 md:m-8 "
+          swipeable={true}
+          draggable={true}
+          showDots={false}
+          arrows={false}
+          responsive={responsive}
+          infinite={true}
+          keyBoardControl={true}
+          customTransition={"transform 300ms ease-in-out "}
+          transitionDuration={1000}
+          centerMode={false}
+        >
+          {cardsData.map((card, index) => (
+            <Button key={index} name={card.title} />
+          ))}
+        </Carousel>
+      </div>
+    </div>
   );
 }
 

@@ -64,12 +64,17 @@ function Third() {
         {slideImages.map((slideImage, index) => (
           <div key={index}>
             <div
-              className="h-[100px] md:h-[200px] lg:h-[300px]"
+              className="h-[100px] md:h-[200px] lg:h-[300px] grid justify-items-start content-center"
               style={{
-                ...divStyle,
+                // ...divStyle,
                 backgroundImage: `url(${slideImage.url}) `,
               }}
-            ></div>
+            >
+              <div className="grid place-items-center h-fit mx-20 gap-10">
+              <p className="text-5xl text-pink-600">WOMAN DAY!</p>
+              <p className="text-3xl text-pink-600">Celebrate with us your special day!</p>
+              </div>
+            </div>
           </div>
         ))}
       </Carousel>
